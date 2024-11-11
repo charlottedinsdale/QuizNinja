@@ -1,3 +1,9 @@
 #ninja-hero {
     max-width: 300px;
 }
+
+#ninja-text {
+    font-family: "Reggae One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
