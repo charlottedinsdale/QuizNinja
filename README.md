@@ -1,14 +1,14 @@
 # QuizNinja
 
 ## Overview
+QuizNinja is a ninja-themed quiz game website where users enter as a young ninja and can test their knowledge on topics such as 'Capital Cities' and be awarded a belt by the Sensei depending on their quiz score.
 
 ### Purpose
 A brief description of the project's purpose, what it aims to achieve, and the value it provides to the users.  
 **Guidance:** Begin filling out this section during Phase 1: Ideation & Initial Setup. Clearly articulate the main goal of your project, what it aims to achieve, and how it will provide value to your target audience.
 
 ### Target Audience
-Identify the target audience for your website and explain why this audience will benefit from the project.  
-**Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
+The target audience is any member of the general public who wishes to test their knowledge on the quiz topics.
 
 ## User Stories
 
@@ -42,9 +42,23 @@ Identify the target audience for your website and explain why this audience will
 ## Design Decisions
 
 ### Wireframes
-Include wireframes for key sections of your website.  
-Briefly describe the design choices, including layout, colour schemes, and fonts.  
-**Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
+A sunset colour-theme was chosen to reflect the colours used in the background image, with orange being the primary colour used for buttons, icons and the favicon. 
+Wireframes were created using Balsamiq and are shown below.
+
+#### Landing Page
+<img width="572" alt="Landing Page Wireframe" src="https://github.com/user-attachments/assets/51a700aa-61fd-4be1-b1fd-8228c5ea2247">
+
+#### Question Page
+<img width="590" alt="Question Page Wireframe" src="https://github.com/user-attachments/assets/bec7c957-eeb7-4c78-94f8-cb19b055867e">
+
+#### Incorrect Answer Page
+<img width="592" alt="Incorrect Answer Wireframe" src="https://github.com/user-attachments/assets/52c7bc38-b481-43b1-97fe-7c2a7c2a6d9c">
+
+#### Correct Answer Page
+<img width="592" alt="Correct Answer Wireframe" src="https://github.com/user-attachments/assets/69706087-e6ea-452b-93e1-bbd5bcf39a37">
+
+#### End of Quiz Page
+<img width="524" alt="End of Quiz Wireframe" src="https://github.com/user-attachments/assets/740cda99-d9c9-4ced-8d33-8eeb399ac42a">
 
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
@@ -52,9 +66,8 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 
 ## AI Tools Usage
 
-### DALL-E
-Describe how DALL-E was used for image generation, including examples of successes and challenges.  
-**Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
+### Freepik AI
+Freepik AI was used to generate the background image, sensei and ninja images. 
 
 ## Features Implementation
 
