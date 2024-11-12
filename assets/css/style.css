@@ -1,3 +1,20 @@
 #ninja-hero {
     max-width: 300px;
 }
+
+#ninja-text {
+    font-family: "Reggae One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#footer-styles {
+    display: flex;
+    position:absolute;
+    text-align: center;
+    justify-content: space-evenly;
+    bottom:-18px;
+    width:100%;
+    height:60px;
+    background:rgb(223, 171, 29);
+ }
