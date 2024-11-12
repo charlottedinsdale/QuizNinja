@@ -9,7 +9,21 @@
     color: azure;
 }
 
+.kiwi-text {
+    font-family: "Kiwi Maru", serif;
+}
 
+.orange-button {
+    background-color: #e86f13;
+    color: #FAF9F6;
+    border-color: #e86f13;
+}
+
+.orange-button:hover {
+    background-color: #FAF9F6;
+    color: #e86f13;
+    border-color: #FAF9F6;
+}
 
 /* _______________________________________________MAIN */
 
@@ -25,16 +39,39 @@
 
 /* _____________________________________________FOOTER */
 
-#footer-styles {
-    display: flex;
-    position:absolute;
-    text-align: center;
-    justify-content: space-evenly;
-    bottom:-18px;
-    width:100%;
-    height:60px;
-    background:rgb(223, 171, 29);
- }
+.footer-container {
+    background-color:#e86f13;
+    color: #FAF9F6;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.footer-container i {
+    color: #f1d7a3;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;   
+    -o-transition: all .5s ease-in-out; 
+}
+
+.footer-container i:hover {
+    color: #fafafa;
+}
+
+#github-icon {
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+i {
+    margin-left: 10px;
+    font-size: larger;
+}
+
+.name-spans {
+    padding-right: 25px;
+  
+/* _____________________________________________QUIZ */
 
  #quiz-container {
     padding: 2rem 0;
