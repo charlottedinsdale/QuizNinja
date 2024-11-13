@@ -51,11 +51,12 @@ a {
 /* _______________________________________________MAIN */
 
 .main-styling {
-    background-image: url(../images/background-image.png);
+    background-image: url(../images/background-image2.png);
     background-color: #e86f13;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 } 
 
 .btn {
@@ -162,5 +163,5 @@ i {
         background-size: 150%;   
     } 
 }
-}
+
 
