@@ -128,7 +128,7 @@ function loadQuestion() {
     questions[currentQuestion].answers.forEach(answer => {
         const button = document.createElement("button");
         button.textContent = answer.text;
-        button.classList.add("btn", "btn-warning", "m-2"); // Using Bootstrap classes
+        button.classList.add("btn", "btn-warning", "m-2");
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -175,7 +175,7 @@ function endQuiz() {
     
     // Add restart button
     const restartButton = document.createElement("button");
-    restartButton.textContent = "Restart Quiz";
+    restartButton.textContent = "Play Again";
     restartButton.classList.add("btn", "btn-primary", "mt-3");
     restartButton.addEventListener("click", () => {
         startQuiz();
@@ -184,7 +184,7 @@ function endQuiz() {
 
     //Home Button
     const homeButton = document.createElement("button");
-    homeButton.textContent = "Return to Home";
+    homeButton.textContent = "Choose another quiz";
     homeButton.classList.add("btn", "btn-secondary", "mt-3", "ms-2");
     homeButton.addEventListener("click", () => {
         window.location.href = 'index.html';
