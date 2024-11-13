@@ -6,7 +6,7 @@
     max-width: 250px;
 }
 
-#ninja-text {
+.ninja-text {
     font-family: "Reggae One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -48,14 +48,35 @@ a {
     color: #fafafa;
 }
 
+.btn-grid button {
+    background-color: #e86f13;
+    border-color: #e86f13;
+    color: #FAF9F6;
+    font-family: "Kiwi Maru", serif;
+}
+
+.btn-grid button:hover {
+    background-color: #FAF9F6;
+    border-color: #FAF9F6;
+    color: #e86f13;
+    font-family: "Kiwi Maru", serif;
+}
+
+.btn-grid button:active {
+    background-color: #ff5500;
+    border-color: #ff5500;
+    color: #fafafa;
+}
+
 /* _______________________________________________MAIN */
 
 .main-styling {
-    background-image: url(../images/background-image.png);
+    background-image: url(../images/background-image2.png);
     background-color: #e86f13;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 } 
 
 .btn {
@@ -65,9 +86,6 @@ a {
 
 /* _____________________________________________FOOTER */
 
-#footer-bottom {
-    margin-top: 364px;
-}
 
 .footer-container {
     background-color:#e86f13;
@@ -134,53 +152,5 @@ i {
 }
 
 
-/* ___________________________________________________Media Queries */
 
-@media (min-width: 768px) {
-    
-    #footer-bottom {
-        margin-top: 406px;
-    }
-
-}
-
-@media (min-width: 820px) {
-    #footer-bottom {
-        margin-top: 560px;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    
-    #footer-bottom {
-        margin-top: 672px;
-    }
-
-
-    .main-styling {
-        background-size: 150%;   
-    } 
-}
-
-/* CSS for the answer display */
-
-.ninja-quote {
-    font-style: italic;
-    font-family: 'Kiwi Maru', serif;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    max-width: 600px;
-    border-left: 4px solid currentColor;
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: 1.2rem;
-}
-
-.text-success.ninja-quote {
-    border-color: #198754;
-}
-
-.text-danger.ninja-quote {
-    border-color: #dc3545;
-}
 
