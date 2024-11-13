@@ -1,3 +1,5 @@
+/* _______________________________________________HERO AND TEXT STYLES */
+
 .ninja-hero {
     max-width: 300px;
 }
@@ -28,6 +30,17 @@ a {
 .kiwi-text {
     font-family: "Kiwi Maru", serif;
 }
+
+.exit-icon {
+    padding-right: 10px;
+}
+
+.exit a {
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+/* _______________________________________________BUTTONS */
 
 .orange-button {
     background-color: #e86f13;
