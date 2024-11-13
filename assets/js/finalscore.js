@@ -4,8 +4,10 @@ window.onload = function() {
     const percentage = Math.round((score / totalQuestions) * 100);
     
     // Display score with percentage
-    const scoreDisplay = document.getElementById('score-display');
-    scoreDisplay.textContent = `Score: ${score}/${totalQuestions} (${percentage}%)`;
+    const scoreDisplay = document.getElementById('final-score');
+    scoreDisplay.textContent = ` ${score}/${totalQuestions} (${percentage}%)`;
+    const beltColour = document.getElementById('belt-colour');
+    beltColour.textContent = getBeltColour(percentage);
     
     // Display belt based on percentage
     const beltDisplay = document.getElementById('belt-display');
@@ -48,6 +50,15 @@ window.onload = function() {
 function getBeltImageSrc(percentage) {
     if (percentage >= 75) return 'assets/images/black-belt.png';
     if (percentage >= 50) return 'assets/images/green-belt.png';
-    if (percentage >= 25) return 'assets/images/red-belt-draft.png';
-    return 'assets/images/white-belt.png';
+    if (percentage >= 25) return 'assets/images/red-belt.png';
+    else { return 'assets/images/white-belt.png';
+}
+}
+
+function getBeltColour(percentage) {
+    if (percentage >= 75) return 'BLACK';
+    if (percentage >= 50) return 'RED';
+    if (percentage >= 25) return 'GREEN';
+    else { return 'WHITE';
+}
 }
