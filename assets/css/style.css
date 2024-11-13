@@ -162,5 +162,25 @@ i {
         background-size: 150%;   
     } 
 }
+
+/* CSS for the answer display */
+
+.ninja-quote {
+    font-style: italic;
+    font-family: 'Kiwi Maru', serif;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 600px;
+    border-left: 4px solid currentColor;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+}
+
+.text-success.ninja-quote {
+    border-color: #198754;
+}
+
+.text-danger.ninja-quote {
+    border-color: #dc3545;
 }
 
