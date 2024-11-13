@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
     // Array of questions for the song lyrics quiz
-    const songQuestions = [
+    const questions = [
         {
             question: "What is the opening line to the song 'Wonderwall' by Oasis?",
             answers: [
@@ -51,8 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuestion = 0;
     let score = 0;
 
-    // Get DOM elements
-    const startButton2 = document.getElementById("start-button2");
+    // DOM elements
     const quizContainer = document.getElementById("quiz-container");
     const heroContainer = document.getElementById("hero-container");
     const questionText = document.getElementById("question-text");
@@ -60,36 +58,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const feedbackElement = document.getElementById("feedback");
     const scoreElement = document.getElementById("score");
 
-    // Add click event to start button
-    console.log("Song Quiz initialized");
-    if (startButton2) {
-        startButton2.addEventListener("click", function() {
-            console.log("Song Quiz Button Clicked");
-            startQuiz();
-        });
-    }
+    // Start quiz automatically when page loads
+    window.onload = function () {
+        startQuiz();
+    };
 
     function startQuiz() {
-        // Hide hero section and show quiz
-        heroContainer.style.display = 'none';
+        // Show quiz (no need to hide hero section as it's a new page)
         quizContainer.style.display = 'block';
-        
+        quizContainer.style.display = 'block';
+
         // Reset quiz state
         currentQuestion = 0;
         score = 0;
-        scoreElement.textContent = `Score: ${score}/${songQuestions.length}`;
+        scoreElement.textContent = `Score: ${score}/${questions.length}`;
         loadQuestion();
     }
 
     function loadQuestion() {
+        // Clear previous feedback
         feedbackElement.textContent = '';
+
+        // Clear previous answer buttons
         answerButtonsElement.innerHTML = '';
-        questionText.textContent = songQuestions[currentQuestion].question;
-        
-        songQuestions[currentQuestion].answers.forEach(answer => {
+
+        // Load current question
+        questionText.textContent = questions[currentQuestion].question;
+
+        // Create answer buttons
+        questions[currentQuestion].answers.forEach(answer => {
             const button = document.createElement("button");
             button.textContent = answer.text;
-            button.classList.add("btn", "btn-warning", "orange-button", "m-2");
+            button.classList.add("btn", "btn-warning", "m-2"); // Using Bootstrap classes
             if (answer.correct) {
                 button.dataset.correct = answer.correct;
             }
@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedButton = e.target;
         const isCorrect = selectedButton.dataset.correct === "true";
 
+        // Update score and feedback
         if (isCorrect) {
             score++;
             feedbackElement.textContent = "Correct!";
@@ -111,8 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
             feedbackElement.className = "text-danger mt-3";
         }
 
-        scoreElement.textContent = `Score: ${score}/${songQuestions.length}`;
-        
+        // Update score display
+        scoreElement.textContent = `Score: ${score}/${questions.length}`;
+
+        // Disable all buttons after selection
         Array.from(answerButtonsElement.children).forEach(button => {
             button.disabled = true;
             if (button.dataset.correct === "true") {
@@ -124,9 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Wait before moving to next question
         setTimeout(() => {
             currentQuestion++;
-            if (currentQuestion < songQuestions.length) {
+            if (currentQuestion < questions.length) {
                 loadQuestion();
             } else {
                 endQuiz();
@@ -137,22 +141,24 @@ document.addEventListener('DOMContentLoaded', function() {
     function endQuiz() {
         answerButtonsElement.innerHTML = '';
         questionText.textContent = "Quiz Complete!";
-        feedbackElement.textContent = `Final Score: ${score}/${songQuestions.length}`;
+        feedbackElement.textContent = `Final Score: ${score}/${questions.length}`;
         feedbackElement.className = "mt-3";
-        
+
+        // Add restart button
         const restartButton = document.createElement("button");
         restartButton.textContent = "Restart Quiz";
         restartButton.classList.add("btn", "btn-primary", "mt-3");
-        restartButton.addEventListener("click", startQuiz);
-        answerButtonsElement.appendChild(restartButton);
-        
-        const menuButton = document.createElement("button");
-        menuButton.textContent = "Return to Menu";
-        menuButton.classList.add("btn", "btn-secondary", "mt-3", "ms-2");
-        menuButton.addEventListener("click", () => {
-            quizContainer.style.display = 'none';
-            heroContainer.style.display = 'block';
+        restartButton.addEventListener("click", () => {
+            startQuiz();
         });
-        answerButtonsElement.appendChild(menuButton);
+        answerButtonsElement.appendChild(restartButton);
+
+        //Home Button
+        const homeButton = document.createElement("button");
+        homeButton.textContent = "Return to Home";
+        homeButton.classList.add("btn", "btn-secondary", "mt-3", "ms-2");
+        homeButton.addEventListener("click", () => {
+            window.location.href = 'index.html';
+        });
+        answerButtonsElement.appendChild(homeButton);
     }
-});
