@@ -41,8 +41,7 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 
-// Get DOM elements
-const startButton = document.getElementById("start-button1");
+// DOM elements
 const quizContainer = document.getElementById("quiz-container");
 const heroContainer = document.getElementById("hero-container");
 const questionText = document.getElementById("question-text");
@@ -50,12 +49,14 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 const feedbackElement = document.getElementById("feedback");
 const scoreElement = document.getElementById("score");
 
-// Add event listener to start button
-startButton.addEventListener("click", startQuiz);
+// Start quiz automatically when page loads
+window.onload = function() {
+    startQuiz();
+};
 
 function startQuiz() {
-    // Hide hero section and show quiz
-    heroContainer.style.display = 'none';
+    // Show quiz (no need to hide hero section as it's a new page)
+    quizContainer.style.display = 'block';
     quizContainer.style.display = 'block';
     
     // Reset quiz state
@@ -142,14 +143,13 @@ function endQuiz() {
         startQuiz();
     });
     answerButtonsElement.appendChild(restartButton);
-    
-    // Add return to menu button
-    const menuButton = document.createElement("button");
-    menuButton.textContent = "Return to Menu";
-    menuButton.classList.add("btn", "btn-secondary", "mt-3", "ms-2");
-    menuButton.addEventListener("click", () => {
-        quizContainer.style.display = 'none';
-        heroContainer.style.display = 'block';
+
+    //Home Button
+    const homeButton = document.createElement("button");
+    homeButton.textContent = "Return to Home";
+    homeButton.classList.add("btn", "btn-secondary", "mt-3", "ms-2");
+    homeButton.addEventListener("click", () => {
+        window.location.href = 'index.html';
     });
-    answerButtonsElement.appendChild(menuButton);
+    answerButtonsElement.appendChild(homeButton);
 }
