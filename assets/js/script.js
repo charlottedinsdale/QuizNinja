@@ -55,15 +55,27 @@ window.onload = function() {
 };
 
 function startQuiz() {
-    // Show quiz (no need to hide hero section as it's a new page)
-    quizContainer.style.display = 'block';
     quizContainer.style.display = 'block';
     
-    // Reset quiz state
-    currentQuestion = 0;
-    score = 0;
+    // Check if we're continuing a quiz
+    const storedQuestion = localStorage.getItem('currentQuestion');
+    if (storedQuestion) {
+        currentQuestion = parseInt(storedQuestion);
+        score = parseInt(localStorage.getItem('quizScore')) || 0;
+    } else {
+        // New quiz
+        currentQuestion = 0;
+        score = 0;
+    }
+
     scoreElement.textContent = `Score: ${score}/${questions.length}`;
-    loadQuestion();
+    
+    // Check if quiz is complete
+    if (currentQuestion >= questions.length) {
+        endQuiz();
+    } else {
+        loadQuestion();
+    }
 }
 
 function loadQuestion() {
@@ -93,40 +105,26 @@ function selectAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
 
-    // Update score and feedback
+    // Get current topic from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentTopic = urlParams.get('topic');
+
     if (isCorrect) {
         score++;
-        feedbackElement.textContent = "Correct!";
-        feedbackElement.className = "text-success mt-3";
+        localStorage.setItem('quizScore', score);
+        localStorage.setItem('isCorrect', 'true');
     } else {
-        feedbackElement.textContent = "Incorrect!";
-        feedbackElement.className = "text-danger mt-3";
+        localStorage.setItem('quizScore', score);
+        localStorage.setItem('isCorrect', 'false');
     }
 
-    // Update score display
-    scoreElement.textContent = `Score: ${score}/${questions.length}`;
+    // Store topic and next question number
+    localStorage.setItem('currentTopic', currentTopic);
+    localStorage.setItem('currentQuestion', currentQuestion + 1); // Store next question
+    localStorage.setItem('totalQuestions', questions.length);
     
-    // Disable all buttons after selection
-    Array.from(answerButtonsElement.children).forEach(button => {
-        button.disabled = true;
-        if (button.dataset.correct === "true") {
-            button.classList.remove("btn-warning");
-            button.classList.add("btn-success");
-        } else if (button === selectedButton) {
-            button.classList.remove("btn-warning");
-            button.classList.add("btn-danger");
-        }
-    });
-
-    // Wait before moving to next question
-    setTimeout(() => {
-        currentQuestion++;
-        if (currentQuestion < questions.length) {
-            loadQuestion();
-        } else {
-            endQuiz();
-        }
-    }, 1500);
+    // Navigate to answer display page
+    window.location.href = 'answerdis.html';
 }
 
 function endQuiz() {
