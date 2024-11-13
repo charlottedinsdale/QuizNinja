@@ -142,7 +142,12 @@ function selectAnswer(e) {
     localStorage.setItem('currentQuestion', currentQuestion + 1);
     localStorage.setItem('totalQuestions', questions.length);
     
-    window.location.href = 'answerdis.html';
+    // Add this if statement to redirect to final score page when quiz is complete
+    if (currentQuestion + 1 >= questions.length) {
+        window.location.href = 'finalscore.html'; // Redirect to final score page
+    } else {
+        window.location.href = 'answerdis.html'; // Show answer feedback
+    }
 }
 
 function endQuiz() {
