@@ -1,5 +1,9 @@
-#ninja-hero {
+.ninja-hero {
     max-width: 300px;
+}
+
+.sensei {
+    max-width: 250px;
 }
 
 #ninja-text {
@@ -9,20 +13,39 @@
     color: azure;
 }
 
+a {
+    text-decoration: none;
+}
+
 .kiwi-text {
     font-family: "Kiwi Maru", serif;
 }
 
 .orange-button {
     background-color: #e86f13;
-    color: #FAF9F6;
     border-color: #e86f13;
+}
+
+.orange-button a {
+    color: #FAF9F6;
 }
 
 .orange-button:hover {
     background-color: #FAF9F6;
-    color: #e86f13;
     border-color: #FAF9F6;
+}
+
+.orange-button:hover a {
+    color: #e86f13;
+}
+
+.orange-button:active {
+    background-color: #ff5500;
+    border-color: #ff5500;
+}
+
+.orange-button:active a {
+    color: #fafafa;
 }
 
 /* _______________________________________________MAIN */
@@ -31,7 +54,7 @@
     background-image: url(../images/background-image.png);
     background-color: #e86f13;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
 } 
 
@@ -99,11 +122,13 @@ i {
 }
 
 #feedback {
+    color: #fafafa;
     font-weight: bold;
     margin-top: 1rem;
 }
 
 #score {
+    color: #fafafa;
     font-weight: bold;
     margin-top: 1rem;
 }
@@ -116,6 +141,7 @@ i {
     #footer-bottom {
         margin-top: 406px;
     }
+
 }
 
 @media (min-width: 820px) {
@@ -123,13 +149,7 @@ i {
         margin-top: 560px;
     }
 
-    .main-styling {
-        background-size: 260%;   
-    } 
 }
-
-
-    
 
 @media (min-width: 1024px) {
     
@@ -137,7 +157,10 @@ i {
         margin-top: 672px;
     }
 
+
     .main-styling {
         background-size: 150%;   
     } 
 }
+}
+
