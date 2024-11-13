@@ -41,8 +41,8 @@ window.onload = function() {
 
 function getBeltImageSrc(percentage) {
     if (percentage >= 75) return 'assets/images/black-belt.png';
-    if (percentage >= 50) return 'assets/images/green-belt.png';
-    if (percentage >= 25) return 'assets/images/red-belt.png';
+    if (percentage >= 50) return 'assets/images/red-belt.png';
+    if (percentage >= 25) return 'assets/images/green-belt.png';
     else { return 'assets/images/white-belt.png';
 };
 }
