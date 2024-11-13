@@ -6,7 +6,7 @@
     max-width: 250px;
 }
 
-#ninja-text {
+.ninja-text {
     font-family: "Reggae One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -45,6 +45,26 @@ a {
 }
 
 .orange-button:active a {
+    color: #fafafa;
+}
+
+.btn-grid button {
+    background-color: #e86f13;
+    border-color: #e86f13;
+    color: #FAF9F6;
+    font-family: "Kiwi Maru", serif;
+}
+
+.btn-grid button:hover {
+    background-color: #FAF9F6;
+    border-color: #FAF9F6;
+    color: #e86f13;
+    font-family: "Kiwi Maru", serif;
+}
+
+.btn-grid button:active {
+    background-color: #ff5500;
+    border-color: #ff5500;
     color: #fafafa;
 }
 
