@@ -187,5 +187,101 @@ i {
     font-size: 1.5rem;
 }
 
+/* --------------------------------------------------CSS code for the finalscore page */
 
+.section {
+    min-height: 100vh;
+    background-image: url('assets/images/dojo.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
+.hero-section-text {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+
+.sensei {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+#belt-display {
+    width: 300px;
+    margin: 2rem auto;
+}
+
+#belt-display img {
+    max-width: 100%;
+    height: auto;
+}
+
+#score-display {
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem 0;
+}
+
+.sensei-quote {
+    color: white;
+    font-style: italic;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.orange-button {
+    background-color: #F68E1E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.orange-button:hover {
+    background-color: #E67E0D;
+}
+
+.ninja-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.exit-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    text-decoration: none;
+    z-index: 10;
+}
+
+#belt-display {
+    width: 300px;
+    margin: 20px auto;
+}
+
+#belt-display img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#score-display {
+    color: white;
+    font-size: 24px;
+    margin: 20px 0;
+}
