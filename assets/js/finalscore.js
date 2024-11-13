@@ -54,3 +54,4 @@ function getBeltColour(percentage) {
     else { return 'WHITE';
 };
 }
+
