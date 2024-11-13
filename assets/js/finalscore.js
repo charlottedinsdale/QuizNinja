@@ -8,18 +8,15 @@ window.onload = function() {
     scoreDisplay.textContent = ` ${score}/${totalQuestions} (${percentage}%)`;
     const beltColour = document.getElementById('belt-colour');
     beltColour.textContent = getBeltColour(percentage);
-    
-    // Determine belt and add text and image directly to score display
-    let beltColor = getBeltColor(percentage);
-    let beltImage = getBeltImageSrc(percentage);
-    
-    scoreDisplay.innerHTML += `
-        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
-            <span style="color: white;">You have been awarded a ${beltColor}</span>
-            <img src="${beltImage}" alt="${beltColor}" style="width: 50px; height: auto;">
-        </div>
-    `;
 
+    // Display belt based on percentage
+    const beltDisplay = document.getElementById('belt-display');
+    const beltImage = document.createElement('img');
+    beltImage.src = getBeltImageSrc(percentage);
+    beltImage.alt = 'Belt Rank';
+    beltImage.className = 'belt-image';
+    beltDisplay.appendChild(beltImage);
+    
     // Display sensei quote
     const quoteDisplay = document.getElementById('quote-display');
     quoteDisplay.textContent = "Keep your focus young one, the path to becoming a true warrior is long.";
@@ -55,4 +52,6 @@ function getBeltColour(percentage) {
     if (percentage >= 50) return 'RED';
     if (percentage >= 25) return 'GREEN';
     else { return 'WHITE';
-}}
+};
+}
+
