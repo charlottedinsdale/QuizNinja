@@ -47,7 +47,7 @@ window.onload = function() {
     // Add continue button
     const continueButton = document.createElement('button');
     continueButton.textContent = 'Next Question';
-    continueButton.classList.add('btn', 'btn-warning', 'orange-button', 'mt-3');
+    continueButton.classList.add('btn','orange-button', 'mt-3', 'kiwi-text');
     continueButton.onclick = function() {
         const topic = localStorage.getItem('currentTopic');
         window.location.href = `quizpage.html?topic=${topic}`;
