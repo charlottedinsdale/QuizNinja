@@ -32,14 +32,14 @@ window.onload = function() {
         headingElement.textContent = "Correct Answer!";
         
         const quoteElement = document.createElement('p');
-        quoteElement.className = 'ninja-quote text-success';
+        quoteElement.className = 'sensei-phrase';
         quoteElement.textContent = getRandomQuote(successQuotes);
         heroText.appendChild(quoteElement);
     } else {
         headingElement.textContent = "Incorrect Answer";
         
         const quoteElement = document.createElement('p');
-        quoteElement.className = 'ninja-quote text-danger';
+        quoteElement.className = 'sensei-phrase';
         quoteElement.textContent = getRandomQuote(failureQuotes);
         heroText.appendChild(quoteElement);
     }
