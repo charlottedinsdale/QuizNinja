@@ -9,42 +9,37 @@ window.onload = function() {
     const beltColour = document.getElementById('belt-colour');
     beltColour.textContent = getBeltColour(percentage);
     
-    // Display belt based on percentage
-    const beltDisplay = document.getElementById('belt-display');
-    const beltImage = document.createElement('img');
-    beltImage.src = getBeltImageSrc(percentage);
-    beltImage.alt = 'Belt Rank';
-    beltImage.className = 'belt-image';
-    beltDisplay.appendChild(beltImage);
+    // Determine belt and add text and image directly to score display
+    let beltColor = getBeltColor(percentage);
+    let beltImage = getBeltImageSrc(percentage);
+    
+    scoreDisplay.innerHTML += `
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
+            <span style="color: white;">You have been awarded a ${beltColor}</span>
+            <img src="${beltImage}" alt="${beltColor}" style="width: 50px; height: auto;">
+        </div>
+    `;
 
     // Display sensei quote
     const quoteDisplay = document.getElementById('quote-display');
     quoteDisplay.textContent = "Keep your focus young one, the path to becoming a true warrior is long.";
 
-    // Clear existing buttons
-    const buttonContainer = document.querySelector('.button-container');
-    buttonContainer.innerHTML = '';
-
-    // Create "Restart Quiz" button (changed from Play Again)
-    const restartButton = document.createElement('button');
-    restartButton.textContent = 'Play Again';
-    restartButton.className = 'btn btn-warning orange-button';
-    restartButton.onclick = function() {
+    // Update button text
+    const bottomButtons = document.querySelectorAll('.hero-section-text .orange-button');
+    
+    // Set up button functionality
+    bottomButtons[0].textContent = 'Play Again';
+    bottomButtons[0].onclick = function() {
         const topic = localStorage.getItem('currentTopic');
         localStorage.clear();
         window.location.href = `quizpage.html?topic=${topic}`;
     };
-    buttonContainer.appendChild(restartButton);
     
-    // Create "Return to Home" button (changed from Choose Another Quiz)
-    const homeButton = document.createElement('button');
-    homeButton.textContent = 'Choose another quiz';
-    homeButton.className = 'btn btn-warning orange-button';
-    homeButton.onclick = function() {
+    bottomButtons[1].textContent = 'Choose another quiz';
+    bottomButtons[1].onclick = function() {
         localStorage.clear();
         window.location.href = 'index.html';
     };
-    buttonContainer.appendChild(homeButton);
 };
 
 function getBeltImageSrc(percentage) {
@@ -52,7 +47,7 @@ function getBeltImageSrc(percentage) {
     if (percentage >= 50) return 'assets/images/green-belt.png';
     if (percentage >= 25) return 'assets/images/red-belt.png';
     else { return 'assets/images/white-belt.png';
-}
+};
 }
 
 function getBeltColour(percentage) {
@@ -60,5 +55,4 @@ function getBeltColour(percentage) {
     if (percentage >= 50) return 'RED';
     if (percentage >= 25) return 'GREEN';
     else { return 'WHITE';
-}
 }
