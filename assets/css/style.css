@@ -9,20 +9,39 @@
     color: azure;
 }
 
+a {
+    text-decoration: none;
+}
+
 .kiwi-text {
     font-family: "Kiwi Maru", serif;
 }
 
 .orange-button {
     background-color: #e86f13;
-    color: #FAF9F6;
     border-color: #e86f13;
+}
+
+.orange-button a {
+    color: #FAF9F6;
 }
 
 .orange-button:hover {
     background-color: #FAF9F6;
-    color: #e86f13;
     border-color: #FAF9F6;
+}
+
+.orange-button:hover a {
+    color: #e86f13;
+}
+
+.orange-button:active {
+    background-color: #ff5500;
+    border-color: #ff5500;
+}
+
+.orange-button:active a {
+    color: #fafafa;
 }
 
 /* _______________________________________________MAIN */
