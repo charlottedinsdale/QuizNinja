@@ -160,7 +160,11 @@ function selectAnswer(e) {
     localStorage.setItem('totalQuestions', questions.length);
     
     // Navigate to answer display page
-    window.location.href = 'answerdis.html';
+    if (currentQuestion + 1 >= questions.length) {
+        window.location.href = 'finalscore.html'; // Redirect to final score page
+    } else {
+        window.location.href = 'answerdis.html'; // Show answer feedback
+    }
 }
 
 function endQuiz() {
