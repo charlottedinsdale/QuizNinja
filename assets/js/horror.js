@@ -44,6 +44,33 @@
                 { text: "Annabelle", correct: false },
                 { text: "Slappy", correct: false }
             ]
+        },
+        {
+            question: "What supernatural power does Carrie have in the movie Carrie?",
+            answers: [
+                { text: "Mind Reading", correct: false },
+                { text: "Telekinesis", correct: true },
+                { text: "Invisibility", correct: false },
+                { text: "Time Travel", correct: false }
+            ]
+        },
+        {
+            question: "Which horror movie features the Necronomicon Ex-Mortis?",
+            answers: [
+                { text: "Hellraiser", correct: false },
+                { text: "The Evil Dead", correct: true },
+                { text: "Pet Sematary", correct: false },
+                { text: "The Craft", correct: false }
+            ]
+        },
+        {
+            question: "What was the original title of The Thing?",
+            answers: [
+                { text: "The Thing from Another World", correct: true },
+                { text: "It Came from Space", correct: false },
+                { text: "The Creature", correct: false },
+                { text: "The Monster", correct: false }
+            ]
         }
     ];
 
