@@ -66,10 +66,6 @@ a {
 
 /* _____________________________________________FOOTER */
 
-#footer-bottom {
-    margin-top: 364px;
-}
-
 .footer-container {
     background-color:#e86f13;
     color: #FAF9F6;
@@ -135,33 +131,5 @@ i {
 }
 
 
-/* ___________________________________________________Media Queries */
-
-@media (min-width: 768px) {
-    
-    #footer-bottom {
-        margin-top: 406px;
-    }
-
-}
-
-@media (min-width: 820px) {
-    #footer-bottom {
-        margin-top: 560px;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    
-    #footer-bottom {
-        margin-top: 672px;
-    }
-
-
-    .main-styling {
-        background-size: 150%;   
-    } 
-}
 
 
