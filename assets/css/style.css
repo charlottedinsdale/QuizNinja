@@ -3,7 +3,7 @@
 }
 
 .sensei {
-    max-width: 250px;
+    max-width: 200px;
 }
 
 .ninja-text {
@@ -32,6 +32,7 @@ a {
 .orange-button {
     background-color: #e86f13;
     border-color: #e86f13;
+    color: #FAF9F6;
 }
 
 .orange-button a {
@@ -41,6 +42,7 @@ a {
 .orange-button:hover {
     background-color: #FAF9F6;
     border-color: #FAF9F6;
+    color: #e86f13;
 }
 
 .orange-button:hover a {
@@ -50,6 +52,7 @@ a {
 .orange-button:active {
     background-color: #ff5500;
     border-color: #ff5500;
+    color: #fafafa;
 }
 
 .orange-button:active a {
