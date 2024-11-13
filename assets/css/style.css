@@ -31,7 +31,7 @@
     background-image: url(../images/background-image.png);
     background-color: #e86f13;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
 } 
 
@@ -99,11 +99,13 @@ i {
 }
 
 #feedback {
+    color: #fafafa;
     font-weight: bold;
     margin-top: 1rem;
 }
 
 #score {
+    color: #fafafa;
     font-weight: bold;
     margin-top: 1rem;
 }
@@ -116,6 +118,7 @@ i {
     #footer-bottom {
         margin-top: 406px;
     }
+
 }
 
 @media (min-width: 820px) {
@@ -123,21 +126,11 @@ i {
         margin-top: 560px;
     }
 
-    .main-styling {
-        background-size: 260%;   
-    } 
 }
-
-
-    
 
 @media (min-width: 1024px) {
     
     #footer-bottom {
         margin-top: 672px;
     }
-
-    .main-styling {
-        background-size: 150%;   
-    } 
 }
