@@ -1,5 +1,9 @@
-#ninja-hero {
+.ninja-hero {
     max-width: 300px;
+}
+
+.sensei {
+    max-width: 250px;
 }
 
 #ninja-text {
