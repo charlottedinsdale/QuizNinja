@@ -36,7 +36,7 @@ window.onload = function() {
         quoteElement.textContent = getRandomQuote(successQuotes);
         heroText.appendChild(quoteElement);
     } else {
-        headingElement.textContent = "Incorrect Answer";
+        headingElement.textContent = "That's Incorrect!";
         
         const quoteElement = document.createElement('p');
         quoteElement.className = 'sensei-phrase';
