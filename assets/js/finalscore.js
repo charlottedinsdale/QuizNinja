@@ -55,4 +55,4 @@ function getBeltColour(percentage) {
     if (percentage >= 50) return 'RED';
     if (percentage >= 25) return 'GREEN';
     else { return 'WHITE';
-}
+}}
