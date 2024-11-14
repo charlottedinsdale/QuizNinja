@@ -285,9 +285,10 @@ i {
     }
 }
 
-@media (min-height: 900px) {
+/* Media Query for Devices with min-height of 900px (viewport height) */
+@media (min-width: 1024px) and (min-height: 900px) {
     .hero-section-text {
-        padding-top: 160px; /* Add padding-top for devices with height >= 900px */
+        padding-top: 180px; /* Add padding-top for devices with height >= 900px */
     }
 }
 
