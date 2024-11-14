@@ -62,6 +62,15 @@ const questions = [
             { text: "Sam Cooke", correct: false },
             { text: "Ray Charles", correct: false }
         ]
+    },
+    {
+        question: "Which Beatles song contains the lyrics 'Yesterday, all my troubles seemed so far away'?",
+        answers: [
+            { text: "Hey Jude", correct: false },
+            { text: "Let It Be", correct: false },
+            { text: "Yesterday", correct: true },
+            { text: "Help!", correct: false }
+        ]
     }
 ];
 
@@ -119,9 +128,13 @@ function selectAnswer(e) {
 
     if (isCorrect) {
         score++;
+        // Update score display immediately
+        scoreElement.textContent = `Score: ${score}/${questions.length}`;
         localStorage.setItem('quizScore', score);
         localStorage.setItem('isCorrect', 'true');
     } else {
+        // Still update score display even for incorrect answers
+        scoreElement.textContent = `Score: ${score}/${questions.length}`;
         localStorage.setItem('quizScore', score);
         localStorage.setItem('isCorrect', 'false');
     }
@@ -133,11 +146,11 @@ function selectAnswer(e) {
     localStorage.setItem('currentQuestion', currentQuestion + 1);
     localStorage.setItem('totalQuestions', questions.length);
     
-    // Add this if statement to redirect to final score page when quiz is complete
+    // Keep your existing redirect logic
     if (currentQuestion + 1 >= questions.length) {
-        window.location.href = 'finalscore.html'; // Redirect to final score page
+        window.location.href = 'finalscore.html';
     } else {
-        window.location.href = 'answerdis.html'; // Show answer feedback
+        window.location.href = 'answerdis.html';
     }
 }
 
