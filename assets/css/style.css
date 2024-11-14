@@ -279,7 +279,7 @@ i {
 }
 
 /* --------------------------------------------------MEDIA QUERIES*/
-@media (min-width: 1500px) {
+@media (min-width: 1024px) and (min-height: 650px) {
     .hero-section-text {
         padding-top: 80px; /* Add more top padding on large screens */
     }
