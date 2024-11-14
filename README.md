@@ -124,7 +124,8 @@ QuizNinja is designed to work on various devices and screen sizes. Typically web
 - Score flashes on screen briefly between questions.
 - Last question doesn't display correct/incorrect before giving final score.
 - Longer questions require user to scroll down to see current score on some screen sizes.
-- Score sometimes displays 0/8 between questions (regardless of score)
+- Score sometimes displays 0/8 between questions (regardless of score).
+- Footer less responsive on mobile than on web.
 
 ## Credits/Acknowledgements
 - ChatGPT - [https://openai.com/](https://openai.com/)
@@ -135,7 +136,7 @@ QuizNinja is designed to work on various devices and screen sizes. Typically web
 
 ## Team Members
 - Charlotte Dinsdale - [https://www.linkedin.com/in/charlotte-dinsdale/](https://www.linkedin.com/in/charlotte-dinsdale/)
-- Dan Anderson - 
+- Dan Anderson - [https://www.linkedin.com/in/daniel-anderson-a1151632](https://www.linkedin.com/in/daniel-anderson-a1151632)
 - Deon Moodley - [https://www.linkedin.com/in/deonmoodley/](https://www.linkedin.com/in/deonmoodley/)
 - Inder Jumar - [https://www.linkedin.com/in/inder-kumar-ik/](https://www.linkedin.com/in/inder-kumar-ik/)
 
