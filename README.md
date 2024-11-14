@@ -77,14 +77,22 @@ Wireframes were created using Balsamiq and are shown below.
 ## Responsiveness
 
 QuizNinja is designed to work on various devices and screen sizes. Typically web, tablet and mobile. Examples of responsiveness.
-
-Add images here
+![All](image.png)
+![Laptop](<NestHub Max.png>)
+![Tablet](<iPad Pro.png>)
+![Mobile](<iPhone 12 Pro.png>)
 
 
 ## Testing
 
 ### Accessibility
+![Accessibility](mobile2.png)
 
+### Performance
+![Performance](mobile1.png)  
+
+### Best Practice and SEO
+![Best Practrice and SEO](mobile3.png)
 
 ### HTML
 
@@ -92,17 +100,44 @@ Add images here
 ![Warnings](<Screenshot 2024-11-14 113209.png>)
 
 
-
-### Manual
+### Manual Testing - Test Cases
+- General functionality:
+- Do all the elements load without any serious delays?
+- Is the layout responsive on all pages?
+- Does the website display correctly on different browsers?
+- Is the user able to return to the homepage once they've navigated away?
+- Is there consistent contrast across the site and is all text readable?
+- Do the buttons take the user to the correct page and display the relevant topic?
+- Footer links:
+- Are the footer links working?
+- Do they go to the expected destination?
+- Do they open up a new tab in the browser?
+- Quiz functionality:
+- Is the score being calculated and displayed at the end of the quizzes?
+- Does the user get feedback to inform them that they answered correctly or incorrectly?
+- Can the user retry or quit the quiz?
 
 ### JavaScript
+![JSHint](onejsfile.png)
 
 ### Known Bugs
+- Score flashes on screen briefly between questions.
+- Last question doesn't display correct/incorrect before giving final score.
+- Longer questions require user to scroll down to see current score on some screen sizes.
+- Score sometimes displays 0/8 between questions (regardless of score)
 
 ## Credits/Acknowledgements
+- ChatGPT - [https://openai.com/](https://openai.com/)
+- Claude - [https://www.claude.ai/](https://www.claude.ai/)
+- Vasilica Pavaloi - [https://www.linkedin.com/in/vasilicapavaloi/](https://www.linkedin.com/in/vasilicapavaloi/)
+- YouTube [https://www.youtube.com/](https://www.youtube.com/)
+- Freepik [https://www.freepik.com/](https://www.freepik.com/)
 
-## Contact Information
-
+## Team Members
+- Charlotte Dinsdale - [https://www.linkedin.com/in/charlotte-dinsdale/](https://www.linkedin.com/in/charlotte-dinsdale/)
+- Dan Anderson - 
+- Deon Moodley - [https://www.linkedin.com/in/deonmoodley/](https://www.linkedin.com/in/deonmoodley/)
+- Inder Jumar - [https://www.linkedin.com/in/inder-kumar-ik/](https://www.linkedin.com/in/inder-kumar-ik/)
 
 
 
