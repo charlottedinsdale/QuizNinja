@@ -160,6 +160,10 @@ i {
     padding-bottom: 2rem;
 }
 
+.quiz-hero {
+    padding-bottom: 0;
+}
+
 .quiz-content {
     text-align: center;
     max-width: 600px;
@@ -272,4 +276,17 @@ i {
     color: white;
     font-style: italic;
     margin: 20px 0;
+}
+
+/* --------------------------------------------------MEDIA QUERIES*/
+@media (min-width: 1500px) {
+    .hero-section-text {
+        padding-top: 80px; /* Add more top padding on large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section-text {
+        padding-bottom: 30px; /* Add bottom padding on mobile devices */
+    }
 }
