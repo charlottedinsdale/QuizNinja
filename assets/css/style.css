@@ -285,6 +285,12 @@ i {
     }
 }
 
+@media (min-height: 900px) {
+    .hero-section-text {
+        padding-top: 160px; /* Add padding-top for devices with height >= 900px */
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section-text {
         padding-bottom: 30px; /* Add bottom padding on mobile devices */
