@@ -141,29 +141,31 @@ function selectAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
 
-    // Get current topic from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const currentTopic = urlParams.get('topic');
-
     if (isCorrect) {
         score++;
+        // Update score display immediately
+        scoreElement.textContent = `Score: ${score}/${questions.length}`;
         localStorage.setItem('quizScore', score);
         localStorage.setItem('isCorrect', 'true');
     } else {
+        // Still update score display even for incorrect answers
+        scoreElement.textContent = `Score: ${score}/${questions.length}`;
         localStorage.setItem('quizScore', score);
         localStorage.setItem('isCorrect', 'false');
     }
 
-    // Store topic and next question number
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentTopic = urlParams.get('topic');
+    
     localStorage.setItem('currentTopic', currentTopic);
-    localStorage.setItem('currentQuestion', currentQuestion + 1); // Store next question
+    localStorage.setItem('currentQuestion', currentQuestion + 1);
     localStorage.setItem('totalQuestions', questions.length);
     
-    // Navigate to answer display page
+    // Keep your existing redirect logic
     if (currentQuestion + 1 >= questions.length) {
-        window.location.href = 'finalscore.html'; // Redirect to final score page
+        window.location.href = 'finalscore.html';
     } else {
-        window.location.href = 'answerdis.html'; // Show answer feedback
+        window.location.href = 'answerdis.html';
     }
 }
 
