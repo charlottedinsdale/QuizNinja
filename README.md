@@ -15,8 +15,47 @@ We have utilised the [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method "MoSCo
 
 ![Project Board User Story Label](<Screenshot 2024-11-14 at 10.52.16.png>)
 
+### MVP
+
+[Homepage](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/6)
+
+[Themes and Colour Palette](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/13)
+
+[Quiz Navigation](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/7)
+
+[Score Tracking](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/8)
+
+[Responsive Design](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/9)
+
+[Quiz Feedback](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/10)
+
+[Accessibility](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/22)
+
+### Future Releases
+
+[Mutli-Topic Quiz](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/18)
+
+[User Profile Creation](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/11)
+
+[Completion and Summary](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/12)
+
+[Timer for Questions](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/16)
+
+[Social Media Sharing](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/20)
+
+[Difficulty Levels](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/14)
+
+[Leaderboard and High Scores](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/15)
+
+[Hints](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/17)
+
+[Save Progress](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/19)
+
+[Progress Tracking and Achievements](https://github.com/Indk0/QuizNinja-Hackathon-1/issues/21)
+
 ## Design Decisions
 A sunset colour-theme was chosen to reflect the colours used in the background image, with orange being the primary colour used for buttons, icons and the favicon. We believe this gives the most authentic view of a dojo.
+
 ### Wireframes
 Wireframes were created using Balsamiq and are shown below.
 
@@ -42,9 +81,17 @@ QuizNinja is designed to work on various devices and screen sizes. Typically web
 Add images here
 
 
-## Accessibility
-
 ## Testing
+
+### Accessibility
+
+
+### HTML
+
+![W3C CSS Validation](<Screenshot 2024-11-14 113154.png>)
+![Warnings](<Screenshot 2024-11-14 113209.png>)
+
+
 
 ### Manual
 
@@ -59,20 +106,3 @@ Add images here
 
 
 
-
-
-
-
-
-
-
-### Accessibility Considerations
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
-
-## AI Tools Usage
-
-### Freepik AI
-Freepik AI was used to generate the background image, sensei and ninja images. 
-
-## Features Implementation
