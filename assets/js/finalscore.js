@@ -16,27 +16,21 @@ window.onload = function() {
     beltImage.alt = 'Belt Rank';
     beltImage.className = 'belt-image';
     beltDisplay.appendChild(beltImage);
-    
-    // Display sensei quote
-    const quoteDisplay = document.getElementById('quote-display');
-    quoteDisplay.textContent = "Keep your focus young one, the path to becoming a true warrior is long.";
 
-    // Update button text
-    const bottomButtons = document.querySelectorAll('.hero-section-text .orange-button');
+ // Update button text
+const playAgain = document.getElementById('end-button'); // No need for # in getElementById
+
+// Set up button functionality
+playAgain.addEventListener('click', clickPlayAgain); // Use 'click' event, not 'onclick'
+
+function clickPlayAgain(e) {
+    console.log('Button clicked!');
+    const topic = localStorage.getItem('currentTopic'); // Retrieve the topic before clearing localStorage
+    localStorage.clear(); // Clear localStorage after getting the topic
+    window.location.href = `quizpage.html?topic=${topic}`; // Redirect with the topic
+};
     
-    // Set up button functionality
-    bottomButtons[0].textContent = 'Play Again';
-    bottomButtons[0].onclick = function() {
-        const topic = localStorage.getItem('currentTopic');
-        localStorage.clear();
-        window.location.href = `quizpage.html?topic=${topic}`;
-    };
-    
-    bottomButtons[1].textContent = 'Choose another quiz';
-    bottomButtons[1].onclick = function() {
-        localStorage.clear();
-        window.location.href = 'index.html';
-    };
+
 };
 
 function getBeltImageSrc(percentage) {
