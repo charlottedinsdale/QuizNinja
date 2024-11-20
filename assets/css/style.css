@@ -180,6 +180,31 @@ i {
 .name-spans {
     padding-right: 25px;
 }
+
+.githubs {
+    width: auto;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1167px) {
+    .surnames {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .name-spans {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .footer-text {
+        justify-content: center !important;
+        
+    }
+}
+
 /* _____________________________________________QUIZ */
 
  #quiz-container {
