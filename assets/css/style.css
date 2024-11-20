@@ -205,6 +205,13 @@ i {
     }
 }
 
+@media screen and (max-width: 360px) {
+    .footer-text {
+        font-size: 8px;
+        
+    }
+}
+
 /* _____________________________________________QUIZ */
 
  #quiz-container {
